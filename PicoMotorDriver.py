@@ -17,7 +17,7 @@ class KitronikPicoMotor:
             speed=100
         #convert 0-100 to 0-65535
         PWM = int(speed*655.35)
-        if motor = 1:
+        if motor == 1:
             if direction == "f":
                 self.motor1Forward.duty_u16(PWM)
                 self.motor1Reverse.duty_u16(0)
@@ -25,8 +25,8 @@ class KitronikPicoMotor:
                 self.motor1Forward.duty_u16(0)
                 self.motor1Reverse.duty_u16(PWM)
             else:
-            raise Exception("INVALID DIRECTION") #harsh, but at least you'll know
-        elif motor =2:
+                raise Exception("INVALID DIRECTION") #harsh, but at least you'll know
+        elif motor == 2:
             if direction == "f":
                 self.motor2Forward.duty_u16(PWM)
                 self.motor2Reverse.duty_u16(0)
@@ -34,8 +34,8 @@ class KitronikPicoMotor:
                 self.motor2Forward.duty_u16(0)
                 self.motor2Reverse.duty_u16(PWM)
             else:
-            raise Exception("INVALID DIRECTION") #harsh, but at least you'll know
-        else
+                raise Exception("INVALID DIRECTION") #harsh, but at least you'll know
+        else:
             raise Excetpion("INVALID MOTOR") #harsh, but at least you'll know
     #To turn off set the speed to 0...
     def motorOff(self,motor):
@@ -85,14 +85,14 @@ class KitronikPicoMotor:
 
     #initialisation code for using:
     #defaluts to the standard pins and freq for the kitronik board, but could be overridden
-    def __init__(self,Motor1ForwardPin = Pin(5),Motor1ReversePin = Pin(4),Motor2ForwardPin = Pin(9),Motor2ReversePin = Pin(10),PWMFreq = 10000):
-        self.M1F=PWM(Motor1ForwardPin)
-        self.M1R=PWM(Motor1ReversePin)
-        self.M2F=PWM(Motor2ForwardPin)
-        self.M2R=PWM(Motor2ReversePin)
-        self.M1F.freq(PWMFreq)
-        self.M1R.freq(PWMFreq)
-        self.M2F.freq(PWMFreq)
-        self.M2R.freq(PWMFreq)
+    def __init__(self,Motor1ForwardPin = machine.Pin(3),Motor1ReversePin = machine.Pin(2),Motor2ForwardPin = machine.Pin(6),Motor2ReversePin = machine.Pin(7),PWMFreq = 10000):
+        self.motor1Forward=machine.PWM(Motor1ForwardPin)
+        self.motor1Reverse=machine.PWM(Motor1ReversePin)
+        self.motor2Forward=machine.PWM(Motor2ForwardPin)
+        self.motor2Reverse=machine.PWM(Motor2ReversePin)
+        self.motor1Forward.freq(PWMFreq)
+        self.motor1Reverse.freq(PWMFreq)
+        self.motor2Forward.freq(PWMFreq)
+        self.motor2Reverse.freq(PWMFreq)
 
          

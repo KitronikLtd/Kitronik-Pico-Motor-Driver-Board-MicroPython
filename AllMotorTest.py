@@ -14,7 +14,7 @@ while True:
         for speed in range(0,25):
             board.motorOn(1, direction, speed)
             board.motorOn(2, direction, 25-speed)
-             utime.sleep_ms(100) #ramp speed over 25x100ms => approx 2.5 second.
+            utime.sleep_ms(100) #ramp speed over 25x100ms => approx 2.5 second.
         for speed in range(0,25):
             board.motorOn(1, direction, 25+speed)
             board.motorOn(2, direction, speed)
