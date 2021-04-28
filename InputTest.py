@@ -13,11 +13,11 @@ Input4 = machine.Pin(27, machine.Pin.IN, machine.Pin.PULL_UP)
 # Switch out Input 1 and 2 for Input 3 and 4 as part of testing
 
 while True:
-    if(Input1.value())
+    if(Input1.value()):
         direction1 = "f"
     else:
         direction1 = "r"
-    if(Input2.value())
+    if(Input2.value()):
         direction2 = "f"
     else:
         direction2 = "r"
