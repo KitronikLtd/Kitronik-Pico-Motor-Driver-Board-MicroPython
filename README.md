@@ -1,7 +1,7 @@
 # Kitronik-Pico-Motor-Driver-Board-MicroPython
 A class and sample code to use the Kitronik Motor driver board for Raspberry Pi Pico. (www.kitronik.co.uk/5331)
 To use save PicoMotorDriver.py file onto the Pico so it can be imported
-## ImportPicoMotorDriver.py and construct an instance:
+## Import PicoMotorDriver.py and construct an instance:
     import PicoMotorDriver
     board = PicoMotorDriver.KitronikPicoMotor()
 
