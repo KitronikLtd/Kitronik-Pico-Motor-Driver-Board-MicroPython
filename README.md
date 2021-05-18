@@ -35,3 +35,8 @@ There are defaulted parameters for
 * hold position when finished stepping (off - saves energy) 
 * how many steps per rev (200).
 Look at the function headers and function comments for more detail if you need to change them.
+
+# Troubleshooting
+
+This code is designed to be used as a module. See: https://kitronik.co.uk/blogs/resources/modules-micro-python-and-the-raspberry-pi-pico for more information
+
