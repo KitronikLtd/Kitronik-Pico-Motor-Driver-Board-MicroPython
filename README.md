@@ -1,5 +1,9 @@
 # Kitronik-Pico-Motor-Driver-Board-MicroPython
 A class and sample code to use the Kitronik Motor driver board for Raspberry Pi Pico. (www.kitronik.co.uk/5331)
+
+This is the MicroPython version. For Circuit Python see: 
+https://github.com/KitronikLtd/Kitronik-Pico-Motor-Driver-Board-CircuitPython
+
 To use save PicoMotorDriver.py file onto the Pico so it can be imported
 ## Import PicoMotorDriver.py and construct an instance:
     import PicoMotorDriver
@@ -24,10 +28,10 @@ where:
 * steps => how many steps to make
 
 ### To step an angle:
-    stepAngle(direction, angle)
+    board.stepAngle(direction, angle)
 where
 * direction => f or r
-* steps => how many steps to make
+* angle => how many degrees to move
 
 The stepper code assumes 200 steps per rev (1.8 degrees resolution) and only does full steps. 
 There are defaulted parameters for 
