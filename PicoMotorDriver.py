@@ -36,7 +36,7 @@ class KitronikPicoMotor:
             else:
                 raise Exception("INVALID DIRECTION") #harsh, but at least you'll know
         else:
-            raise Excetpion("INVALID MOTOR") #harsh, but at least you'll know
+            raise Exception("INVALID MOTOR") #harsh, but at least you'll know
     #To turn off set the speed to 0...
     def motorOff(self,motor):
         self.motorOn(motor,"f",0)
