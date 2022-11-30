@@ -84,7 +84,7 @@ class KitronikPicoMotor:
         
 
     #initialisation code for using:
-    #defaluts to the standard pins and freq for the kitronik board, but could be overridden
+    #defaults to the standard pins and freq for the kitronik board, but could be overridden
     def __init__(self,Motor1ForwardPin = machine.Pin(3),Motor1ReversePin = machine.Pin(2),Motor2ForwardPin = machine.Pin(6),Motor2ReversePin = machine.Pin(7),PWMFreq = 10000):
         self.motor1Forward=machine.PWM(Motor1ForwardPin)
         self.motor1Reverse=machine.PWM(Motor1ReversePin)
